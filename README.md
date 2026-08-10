@@ -1,4 +1,4 @@
-# ThuraGirl — prototype v14 (walk-back)
+# ThuraGirl — prototype v14.1
 
-Static export of the ThuraGirl Next.js prototype, served via GitHub Pages at
+Static export served via GitHub Pages at
 https://carmochest.github.io/thuragirl
