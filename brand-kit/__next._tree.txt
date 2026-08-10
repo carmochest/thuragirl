@@ -1,0 +1,3 @@
+:HL["/thuragirl/_next/static/chunks/0gen3-6s7xd1d.css","style"]
+:HC["/",""]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"brand-kit","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"dArh73oyZfAEZFyCmk1xL"}
