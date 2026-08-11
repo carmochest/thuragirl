@@ -1,4 +1,4 @@
-# ThuraGirl — prototype v18.1
+# ThuraGirl — prototype v19
 
 Static export served via GitHub Pages at
 https://carmochest.github.io/thuragirl
