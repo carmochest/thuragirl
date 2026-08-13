@@ -1,4 +1,4 @@
 :HL["/thuragirl/_next/static/chunks/0kqwfobqrngf2.css","style"]
-:HL["/thuragirl/_next/static/chunks/0-d374.772bjl.css","style"]
+:HL["/thuragirl/_next/static/chunks/0vrymvjbal8c-.css","style"]
 :HC["/",""]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"(app)","param":null,"prefetchHints":0,"slots":{"children":{"name":"contacts","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"kJ81tx7eDwEA3f6lY6nWE"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"(app)","param":null,"prefetchHints":0,"slots":{"children":{"name":"contacts","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"0OYm8vbbs6lSqCOnA9FUd"}
