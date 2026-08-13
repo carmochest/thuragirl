@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-3:I[97367,["/thuragirl/_next/static/chunks/18b0dx~ztorsd.js","/thuragirl/_next/static/chunks/0n4z.7yu76je-.js","/thuragirl/_next/static/chunks/17km3oohq1p3a.js"],"OutletBoundary"]
+3:I[97367,["/thuragirl/_next/static/chunks/18b0dx~ztorsd.js","/thuragirl/_next/static/chunks/0n4z.7yu76je-.js","/thuragirl/_next/static/chunks/0qdr.34qn_4xl.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":["$L2",null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"pU_skLvTJSg5l-iDOCPeg"}
+0:{"rsc":["$","$1","c",{"children":["$L2",null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"56BDaIuE37leaAN6pLc9U"}
 5:null
 2:E{"digest":"NEXT_REDIRECT;replace;/;307;"}
