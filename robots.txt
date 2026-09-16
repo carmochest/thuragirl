@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carmochest.github.io/thuragirl/sitemap.xml
