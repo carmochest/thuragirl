@@ -43,6 +43,7 @@
   *{margin:0;padding:0;box-sizing:border-box;}
   a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--teal-deep);outline-offset:2px;border-radius:8px;}
   html{scroll-behavior:smooth;}
+  section,#top{scroll-margin-top:76px;}
   body{font-family:"Manrope","Noto Sans Thai",system-ui,sans-serif;color:var(--ink);background:#fff;
        -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
   .num{font-family:"DM Sans","Noto Sans Thai",sans-serif;font-variant-numeric:lining-nums;letter-spacing:-0.005em;}
@@ -57,6 +58,13 @@
   .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line);padding:14px 28px;font-size:15.5px;}
   .btn-ghost:hover{border-color:#d7dadf;background:var(--bg-alt);}
   .btn-sm{padding:9px 18px;font-size:13.5px;}
+  @supports (animation-timeline: view()){
+    @media (prefers-reduced-motion: no-preference){
+      .card,.step,.tcard,.plan,.sec-head,.band,.igroup,.inote,.faq details,.dl{
+        animation:rvin .8s ease both;animation-timeline:view();animation-range:entry 0% entry 42%;}
+      @keyframes rvin{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+    }
+  }
   .kick{font-size:11.5px;font-weight:800;letter-spacing:.14em;color:var(--teal-deep);margin-bottom:12px;text-transform:uppercase;}
   /* nav */
   nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);
@@ -92,7 +100,7 @@
   h1 .hl{color:var(--teal-deep);}
   .sub{font-size:clamp(15.5px,1.8vw,18.5px);line-height:1.65;color:var(--body);max-width:640px;margin:22px auto 0;}
   .ctas{display:flex;gap:14px;justify-content:center;margin-top:34px;flex-wrap:wrap;}
-  .trust{margin-top:18px;font-size:13px;color:var(--faint);font-weight:600;}
+  .trust{margin-top:18px;font-size:13px;color:var(--muted);font-weight:600;}
   .shots{position:relative;max-width:980px;margin:64px auto -6px;padding:0 24px;}
   .browser{border-radius:16px 16px 0 0;border:1px solid var(--line);border-bottom:none;background:#fff;
         box-shadow:0 -20px 80px rgba(10,163,155,.13),0 4px 60px rgba(0,0,0,.07);overflow:hidden;}
@@ -133,6 +141,7 @@
   .mq .lbl{text-align:center;font-size:12px;font-weight:700;color:var(--faint);letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px;}
   .mqtrack{display:flex;gap:12px;width:max-content;animation:mq 36s linear infinite;}
   .chip{border:1px solid var(--line);background:var(--bg-alt);border-radius:999px;padding:8px 18px;font-size:13.5px;font-weight:600;color:var(--body);white-space:nowrap;}
+  .mq:hover .mqtrack{animation-play-state:paused;}
   @keyframes mq{to{transform:translateX(-50%);}}
   /* sections */
   section{padding:96px 0;}
@@ -151,7 +160,7 @@
   .grid .card:nth-child(5) .ico{background:rgba(14,165,233,.12);}
   .grid .card:nth-child(6) .ico{background:rgba(34,197,94,.12);}
   .card h3{font-size:16.5px;font-weight:700;margin-bottom:8px;letter-spacing:-0.01em;}
-  .card p{font-size:14px;line-height:1.65;color:var(--body);}
+  .card p{font-size:14.5px;line-height:1.68;color:var(--body);}
   /* steps */
   .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
   .step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px 28px;}
@@ -176,16 +185,29 @@
   .band .art img{width:150px;filter:drop-shadow(0 12px 26px rgba(0,0,0,.22));}
   /* testimonials */
   .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;}
-  .tcard{background:var(--bg-alt);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;}
+  .tcard{background:var(--bg-alt);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;transition:all .2s ease;position:relative;}
+  .tcard:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(0,0,0,.06);}
+  .tcard::before{content:"\201C";position:absolute;top:14px;right:22px;font-size:56px;line-height:1;color:rgba(15,191,182,.16);font-weight:800;}
   .stars{color:#f59e0b;letter-spacing:2.5px;font-size:13px;}
   .tcard>p{margin:15px 0 22px;font-size:14.5px;line-height:1.72;color:var(--body);flex:1;}
   .twho{display:flex;gap:12px;align-items:center;}
   .tav{width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:15px;flex-shrink:0;}
   .twho b{display:block;font-size:14px;letter-spacing:-0.01em;}
   .twho span{font-size:12px;color:var(--muted);font-weight:600;}
+  /* integrations */
+  .igroup{margin-bottom:30px;}
+  .iglabel{font-size:12px;font-weight:800;color:var(--faint);letter-spacing:.09em;text-transform:uppercase;margin-bottom:12px;text-align:center;}
+  .itiles{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+  .itile{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:#fff;border-radius:14px;
+        padding:9px 16px 9px 9px;font-weight:700;font-size:13.5px;color:var(--ink);transition:all .18s ease;cursor:default;}
+  .itile:hover{border-color:rgba(15,191,182,.45);transform:translateY(-1px);box-shadow:0 8px 22px rgba(10,163,155,.10);}
+  .imono{width:30px;height:30px;border-radius:9px;color:#fff;font-weight:800;font-size:12.5px;display:flex;align-items:center;justify-content:center;letter-spacing:-0.02em;}
+  .inote{max-width:640px;margin:14px auto 0;text-align:center;font-size:13px;color:var(--muted);line-height:1.7;font-weight:600;}
+  .inote b{color:var(--teal-ink);}
   /* pricing */
   .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;align-items:stretch;}
-  .plan{background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:34px 30px;display:flex;flex-direction:column;}
+  .plan{background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:34px 30px;display:flex;flex-direction:column;transition:all .2s ease;}
+  .plan:hover{transform:translateY(-2px);}
   .plan.hot{border-color:var(--teal);box-shadow:0 18px 50px rgba(10,163,155,.14);position:relative;
         background:linear-gradient(180deg,rgba(15,191,182,.06),#fff 42%);}
   .plan .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--teal-deep);color:#fff;
@@ -279,6 +301,7 @@
     <div class="navlinks">
       <a href="#features" data-i18n="n.f">Features</a>
       <a href="#how" data-i18n="n.h">How it works</a>
+      <a href="#integrations" data-i18n="n.i">Integrations</a>
       <a href="#pricing" data-i18n="n.p">Pricing</a>
       <a href="#faq" data-i18n="n.q">FAQ</a>
     </div>
@@ -380,10 +403,65 @@
       <p data-i18n="w.sub">No file migration, no staff training, no meetings.</p>
     </div>
     <div class="steps">
-      <div class="step"><span class="n num">1</span><h3 data-i18n="w1.h">Sign up in 20 seconds</h3><p data-i18n="w1.p">Email, phone, or your LINE account — like any other app.</p></div>
-      <div class="step"><span class="n num">2</span><h3 data-i18n="w2.h">Pick your company</h3><p data-i18n="w2.p">Register a new one with DBD right in the app, or enter your 13-digit tax ID and we pull your existing company.</p></div>
-      <div class="step"><span class="n num">3</span><h3 data-i18n="w3.h">Hand over the back office</h3><p data-i18n="w3.p">You approve the important stuff. ThuraGirl handles the rest 🌸</p></div>
+      <div class="step"><span class="n num">1</span><h3 data-i18n="w1.h">Create your account</h3><p data-i18n="w1.p">20 seconds with email, phone or LINE — then register a new company with DBD in-app, or pull your existing one by tax ID.</p></div>
+      <div class="step"><span class="n num">2</span><h3 data-i18n="w2.h">1-click connect your apps</h3><p data-i18n="w2.p">POS, ERP, payroll, banks and sales channels sync in one click — your books fill themselves from day one.</p></div>
+      <div class="step"><span class="n num">3</span><h3 data-i18n="w3.h">ThuraGirl runs the back office</h3><p data-i18n="w3.p">Books kept, taxes filed, cash visible. You just approve the important stuff 🌸</p></div>
     </div>
+  </div>
+</section>
+
+<section id="integrations">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick" data-i18n="k.i">Integrations</div>
+      <h2 data-i18n="i.h">Plays well with your whole stack</h2>
+      <p data-i18n="i.sub">Keep the tools you already run. ThuraGirl syncs two-way with your ERP, POS, payroll and sales channels — so the books are always complete, wherever the data lives.</p>
+    </div>
+    <div class="igroup">
+      <div class="iglabel" data-i18n="i.g1">Accounting &amp; ERP</div>
+      <div class="itiles">
+        <span class="itile"><span class="imono" style="background:#0f3a8c;">SAP</span>SAP Business One</span>
+        <span class="itile"><span class="imono" style="background:#c74634;">N</span>Oracle NetSuite</span>
+        <span class="itile"><span class="imono" style="background:#107c41;">D</span>Dynamics 365</span>
+        <span class="itile"><span class="imono" style="background:#13b5ea;">X</span>Xero</span>
+        <span class="itile"><span class="imono" style="background:#2ca01c;">QB</span>QuickBooks</span>
+        <span class="itile"><span class="imono" style="background:#1f7aec;">FA</span>FlowAccount</span>
+        <span class="itile"><span class="imono" style="background:#6d28d9;">PK</span>PEAK</span>
+      </div>
+    </div>
+    <div class="igroup">
+      <div class="iglabel" data-i18n="i.g2">POS &amp; Retail</div>
+      <div class="itiles">
+        <span class="itile"><span class="imono" style="background:#f97316;">SH</span>StoreHub</span>
+        <span class="itile"><span class="imono" style="background:#ee4d2d;">O</span>Ocha POS</span>
+        <span class="itile"><span class="imono" style="background:#dc2626;">FS</span>FoodStory</span>
+        <span class="itile"><span class="imono" style="background:#16a34a;">LV</span>Loyverse</span>
+        <span class="itile"><span class="imono" style="background:#0a0a0a;">SQ</span>Square</span>
+      </div>
+    </div>
+    <div class="igroup">
+      <div class="iglabel" data-i18n="i.g3">HR &amp; Payroll</div>
+      <div class="itiles">
+        <span class="itile"><span class="imono" style="background:#0e7490;">HU</span>Humanica</span>
+        <span class="itile"><span class="imono" style="background:#7c3aed;">HR</span>HReasily</span>
+        <span class="itile"><span class="imono" style="background:#65a30d;">BH</span>BambooHR</span>
+        <span class="itile"><span class="imono" style="background:#0284c7;">PP</span>PeoplePlus</span>
+      </div>
+    </div>
+    <div class="igroup">
+      <div class="iglabel" data-i18n="i.g4">Sales channels &amp; Payments</div>
+      <div class="itiles">
+        <span class="itile"><span class="imono" style="background:#ee4d2d;">S</span>Shopee</span>
+        <span class="itile"><span class="imono" style="background:#0f156d;">Lz</span>Lazada</span>
+        <span class="itile"><span class="imono" style="background:#06C755;">LN</span>LINE Shopping</span>
+        <span class="itile"><span class="imono" style="background:#95bf47;">Sh</span>Shopify</span>
+        <span class="itile"><span class="imono" style="background:#00b14f;">G</span>GrabFood</span>
+        <span class="itile"><span class="imono" style="background:#1a56db;">OP</span>Opn Payments</span>
+        <span class="itile"><span class="imono" style="background:#e11d48;">2C</span>2C2P</span>
+        <span class="itile"><span class="imono" style="background:#003d6b;">PP</span>PromptPay</span>
+      </div>
+    </div>
+    <p class="inote"><span data-i18n="i.note">Plus direct e-filing with</span> <b>DBD · Revenue Department · Social Security Office</b><br><span data-i18n="i.more">Don't see your system? Tell ThuraGirl in chat — CSV and Excel import work with everything.</span></p>
   </div>
 </section>
 
@@ -530,6 +608,7 @@
       <div class="footcol">
         <h4 data-i18n="ft.explore">Explore</h4>
         <a href="#features" data-i18n="n.f">Features</a>
+        <a href="#integrations" data-i18n="n.i">Integrations</a>
         <a href="#pricing" data-i18n="n.p">Pricing</a>
         <a href="#faq" data-i18n="n.q">FAQ</a>
       </div>
@@ -543,7 +622,7 @@
 
 <script>
 const TH = {
-  "n.f":"ฟีเจอร์","n.h":"วิธีใช้","n.p":"ราคา","n.q":"คำถาม","n.login":"เข้าสู่ระบบ","n.cta":"เริ่มใช้เลย",
+  "n.f":"ฟีเจอร์","n.h":"วิธีใช้","n.i":"การเชื่อมต่อ","n.p":"ราคา","n.q":"คำถาม","n.login":"เข้าสู่ระบบ","n.cta":"เริ่มใช้เลย",
   "h.kicker":"นักบัญชี AI สำหรับธุรกิจไทย",
   "h.t1":"บัญชี ภาษี เอกสารบริษัท","h.t2":"มีคนดูแลให้แล้ว",
   "h.sub":"ThuraGirl คือนักบัญชี AI ที่ดูแลงานหลังบ้านของ SME ไทยทั้งหมด — ตั้งแต่จดทะเบียนบริษัทกับ DBD จนถึงปิดงบ ส่วนคุณ แค่ถ่ายรูปส่งมาทาง LINE",
@@ -555,7 +634,7 @@ const TH = {
   "mq.h":"สร้างมาเพื่อธุรกิจไทยทุกแบบ",
   "mq.1":"🍜 ร้านอาหาร","mq.2":"☕ คาเฟ่","mq.3":"🛍️ ขายออนไลน์","mq.4":"💇 ซาลอน","mq.5":"🔧 อู่ซ่อมรถ",
   "mq.6":"🏗️ รับเหมาก่อสร้าง","mq.7":"📦 ขนส่ง","mq.8":"🧶 งานคราฟต์","mq.9":"🏨 เกสต์เฮาส์","mq.10":"💊 ร้านยา",
-  "k.f":"สิ่งที่หนูทำให้","k.w":"วิธีใช้งาน","k.t":"เจ้าของธุรกิจว่าไง","k.p":"ราคา","k.q":"คำถามพบบ่อย",
+  "k.f":"สิ่งที่หนูทำให้","k.w":"วิธีใช้งาน","k.i":"การเชื่อมต่อ","k.t":"เจ้าของธุรกิจว่าไง","k.p":"ราคา","k.q":"คำถามพบบ่อย",
   "f.h":"ทุกงานหลังบ้าน ในที่เดียว",
   "f.sub":"ทุกอย่างที่เคยจ้างสำนักงานบัญชี — เร็วกว่า ถูกกว่า และคุยรู้เรื่องกว่า",
   "f1.h":"ถ่ายรูป แล้วลงบัญชีให้เอง","f1.p":"ส่งใบเสร็จ ใบแจ้งหนี้ หรือสลิปทาง LINE หรือในแอป ThuraGirl อ่าน จัดหมวด และบันทึกบัญชีให้ทันที ไม่ต้องคีย์เอง",
@@ -565,9 +644,13 @@ const TH = {
   "f5.h":"คุยได้เหมือนเพื่อนร่วมงาน","f5.p":"“เดือนนี้กำไรเท่าไหร่” “ใครยังไม่จ่าย” — ถามเป็นภาษาคน ตอบเป็นภาษาคน ทั้งไทยและอังกฤษ",
   "f6.h":"ปลอดภัยระดับธนาคาร","f6.p":"ข้อมูลเข้ารหัสทั้งการส่งและจัดเก็บ คุณเป็นเจ้าของข้อมูล 100% ดาวน์โหลดหรือถอนออกได้ทุกเมื่อ",
   "w.h":"เริ่มได้ใน 3 ขั้น","w.sub":"ไม่ต้องย้ายไฟล์ ไม่ต้องเทรนพนักงาน ไม่ต้องประชุม",
-  "w1.h":"สมัครใน 20 วินาที","w1.p":"อีเมล เบอร์โทร หรือบัญชี LINE — เหมือนสมัครแอปทั่วไป",
-  "w2.h":"เลือกบริษัทของคุณ","w2.p":"จดบริษัทใหม่กับ DBD ในแอป หรือใส่เลขผู้เสียภาษี 13 หลัก แล้วให้ดึงข้อมูลบริษัทเดิมมาให้",
-  "w3.h":"ยกงานหลังบ้านให้หนู","w3.p":"คุณอนุมัติเรื่องสำคัญ ที่เหลือ ThuraGirl จัดการให้ทั้งหมด 🌸",
+  "w1.h":"สร้างบัญชีของคุณ","w1.p":"20 วินาทีด้วยอีเมล เบอร์โทร หรือ LINE — แล้วจดบริษัทใหม่กับ DBD ในแอป หรือดึงบริษัทเดิมด้วยเลขผู้เสียภาษี",
+  "w2.h":"เชื่อมทุกแอปในคลิกเดียว","w2.p":"POS, ERP, เงินเดือน, ธนาคาร และช่องทางขาย ซิงก์ในคลิกเดียว — บัญชีเติมเองตั้งแต่วันแรก",
+  "w3.h":"ที่เหลือหนูจัดการ","w3.p":"ทำบัญชี ยื่นภาษี เห็นเงินสดตลอด — คุณแค่อนุมัติเรื่องสำคัญ 🌸",
+  "i.h":"เชื่อมได้กับทุกระบบที่คุณใช้",
+  "i.sub":"ใช้เครื่องมือเดิมต่อได้เลย ThuraGirl ซิงก์สองทางกับ ERP, POS, ระบบเงินเดือน และช่องทางขายของคุณ — บัญชีจึงครบถ้วนเสมอ ไม่ว่าข้อมูลอยู่ที่ไหน",
+  "i.g1":"บัญชีและ ERP","i.g2":"POS และหน้าร้าน","i.g3":"HR และเงินเดือน","i.g4":"ช่องทางขายและการชำระเงิน",
+  "i.note":"พร้อมยื่นตรงกับ","i.more":"ไม่เห็นระบบที่ใช้อยู่? บอกหนูในแชทได้เลย — นำเข้า CSV และ Excel ได้กับทุกระบบ",
   "b.h":"ยังไม่มีบริษัท? จดใหม่ได้ใน 10 นาที",
   "b.p":"กรอกเหมือนสมัครโซเชียลมีเดีย แล้ว ThuraGirl ยื่น DBD ให้ครบทุกขั้นตอน:",
   "b.1":"จองชื่อบริษัท 3 อันดับกับ DBD",
@@ -628,6 +711,13 @@ try {
   const saved = localStorage.getItem("thuragirl.locale");
   if (saved === "th") setLang("th");
 } catch(e){}
+// reveal-on-scroll handled in pure CSS (animation-timeline: view())
+// one FAQ open at a time
+document.querySelectorAll(".faq details").forEach(d => {
+  d.addEventListener("toggle", () => {
+    if (d.open) document.querySelectorAll(".faq details[open]").forEach(o => { if (o !== d) o.open = false; });
+  });
+});
 </script>
 </body>
 </html>
