@@ -1,9 +1,9 @@
 1:"$Sreact.fragment"
-2:I[47257,["/thuragirl/_next/static/chunks/18b0dx~ztorsd.js","/thuragirl/_next/static/chunks/0stf7zh07-41b.js","/thuragirl/_next/static/chunks/0n4z.7yu76je-.js"],"ClientPageRoot"]
-3:I[30851,["/thuragirl/_next/static/chunks/18b0dx~ztorsd.js","/thuragirl/_next/static/chunks/0stf7zh07-41b.js","/thuragirl/_next/static/chunks/0n4z.7yu76je-.js","/thuragirl/_next/static/chunks/03nkj6~ckv_.1.js","/thuragirl/_next/static/chunks/0ygc.~90_g9sh.js","/thuragirl/_next/static/chunks/09rw3nzerrrcs.js","/thuragirl/_next/static/chunks/0~7x53hkv1qiz.js"],"default"]
-6:I[97367,["/thuragirl/_next/static/chunks/18b0dx~ztorsd.js","/thuragirl/_next/static/chunks/0stf7zh07-41b.js","/thuragirl/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+2:I[47257,["/thuragirl/_next/static/chunks/18b0dx~ztorsd.js","/thuragirl/_next/static/chunks/15zh1b9gal240.js","/thuragirl/_next/static/chunks/0n4z.7yu76je-.js"],"ClientPageRoot"]
+3:I[30851,["/thuragirl/_next/static/chunks/18b0dx~ztorsd.js","/thuragirl/_next/static/chunks/15zh1b9gal240.js","/thuragirl/_next/static/chunks/0n4z.7yu76je-.js","/thuragirl/_next/static/chunks/03nkj6~ckv_.1.js","/thuragirl/_next/static/chunks/0ygc.~90_g9sh.js","/thuragirl/_next/static/chunks/09rw3nzerrrcs.js","/thuragirl/_next/static/chunks/0~_j3sxi899ts.js"],"default"]
+6:I[97367,["/thuragirl/_next/static/chunks/18b0dx~ztorsd.js","/thuragirl/_next/static/chunks/15zh1b9gal240.js","/thuragirl/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/thuragirl/_next/static/chunks/0~7x53hkv1qiz.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"8KsArqCCBA2V3EY8IYeMb"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/thuragirl/_next/static/chunks/0~_j3sxi899ts.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"daohdjHRQYXb0jk0Z0PEL"}
 4:{}
 5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
 8:null
